@@ -1,0 +1,16 @@
+.error {
+    color: red;
+}
+
+form {
+    border:2px solid blue;
+    padding:20px ;
+    width:max-content;
+    
+
+}
+
+.container {
+    text-align:left;
+    background-color: cornflowerblue;
+}
