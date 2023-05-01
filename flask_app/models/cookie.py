@@ -66,19 +66,23 @@ class Cookie:
         if len(cookie["name"]) <= 0:
             is_valid = False
             flash("client name is required.")
+        elif len(cookie["name"]) < 2: 
+            flash("name must be at least 2 characters")
+            is_valid = False
         if len(cookie["type"]) <= 0:
             is_valid = False
             flash("Type is required.")
+        elif len(cookie["type"]) < 2: 
+            flash("type must be at least 2 characters")
+            is_valid = False
         if len(cookie["num_of_boxes"]) <= 0:
             is_valid = False
             flash("number of boxes is required.")
+        elif int(cookie["num_of_boxes"]) <=0:
+            is_valid = False
+            flash("Quantity must be at least 1")
+        
 
-        if len(cookie["name"]) > 0 and len(cookie["name"]) < 2: 
-            flash("name must be at 2 characters")
-            is_valid = False
-        if len(cookie["type"]) > 0 and len(cookie["type"]) < 2: 
-            flash("type must be at 2 characters")
-            is_valid = False
         #this way, it won't report the base 10 error when do not input anything in num_of_boxes
         # if cookie["num_of_boxes"]:#if there is some input
         #     if int(cookie["num_of_boxes"]) <=0:#then decide if it is less than zero or equals to zero
