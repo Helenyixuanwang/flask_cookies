@@ -102,11 +102,7 @@ Update the database credentials in `flask_app/configs/mysqlconnection.py` if nee
 python server.py
 ```
 
-The application should be available at http://localhost:5000
-
-### Production Deployment
-
-For production deployment to AWS EC2, refer to the detailed [Deployment Guide](https://github.com/Helenyixuanwang/flask_cookies/blob/main/deployment_guide.md).
+The application should be available at http://3.22.217.192/
 
 ## Database Schema
 
