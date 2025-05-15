@@ -13,7 +13,7 @@ A Flask web application for managing cookie orders, featuring a responsive inter
 
 ## Live Demo
 
-The application is deployed and accessible at: http://52.14.26.61
+The application is deployed and accessible at: http://3.22.217.192
 
 ## Technologies Used
 
@@ -48,8 +48,9 @@ cookie_app/
 │   ├── models/             # Data models
 │   │   └── cookie.py       # Cookie model with database operations
 │   └── templates/          # Jinja2 HTML templates
-│       ├── index.html      # Order listing and creation page
-│       └── edit.html       # Order editing page
+│       ├── index.html      # Order listing page
+│       ├── edit_cookie.html # Order editing page
+│       └── new_order.html  # Order creation page
 ├── server.py               # Application entry point
 └── wsgi.py                 # WSGI entry point for Gunicorn
 ```
@@ -65,8 +66,8 @@ cookie_app/
 
 1. Clone the repository
 ```bash
-git clone https://github.com/Helenyixuanwang/flask_dojosurvey.git
-cd flask_dojosurvey
+git clone https://github.com/Helenyixuanwang/flask_cookies.git
+cd flask_cookies
 ```
 
 2. Create a virtual environment and activate it
@@ -102,6 +103,10 @@ python server.py
 ```
 
 The application should be available at http://localhost:5000
+
+### Production Deployment
+
+For production deployment to AWS EC2, refer to the detailed [Deployment Guide](https://github.com/Helenyixuanwang/flask_cookies/blob/main/deployment_guide.md).
 
 ## Database Schema
 
