@@ -42,6 +42,14 @@ def edit_cookie():
     Cookie.update(request.form)
     return redirect("/")
 
+@app.route('/delete/<int:id>', methods=['POST'])
+def delete_cookie(id):
+    data = {
+        "id": id
+    }
+    Cookie.delete(data)
+    return redirect('/')
+
 
 # @app.route('/user/<int:user_id>')
 # def get_oneUser(user_id):

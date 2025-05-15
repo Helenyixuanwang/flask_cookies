@@ -52,12 +52,16 @@ class Cookie:
                 WHERE id = %(id)s;"""
         return connectToMySQL(cls.DB).query_db(query,data)
     
+    # @classmethod
+    # def delete(cls, cookie_id):
+    #     query  = "DELETE FROM cookies WHERE id = %(id)s;"
+    #     data = {"id": cookie_id}
+    #     return connectToMySQL(cls.DB).query_db(query, data)
     @classmethod
-    def delete(cls, cookie_id):
-        query  = "DELETE FROM cookies WHERE id = %(id)s;"
-        data = {"id": cookie_id}
+    def delete(cls, data):
+        query = "DELETE FROM cookies WHERE id = %(id)s;"
         return connectToMySQL(cls.DB).query_db(query, data)
-            
+
     @staticmethod
     def is_valid_cookie(cookie):
         is_valid = True
